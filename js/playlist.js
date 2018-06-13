@@ -1,8 +1,22 @@
-var playList = []
+var playList = [
+  "I did it my way",
+  "Respect",
+  "imagine",
+  "Born to Run",
+  'Loui Loui',
+  'Maybellene'
+];
 
-playList.push('I did It My Way');
-playList.push("Respect", "Imagine");
-playList.unshift('Born to Run');
-playList.unshift('Louie Louie', 'Maybellene');
+function print(message) {
+  document.write(message);
+}
 
-printList(playList);
+function printList (list) {
+  var listHTML = '<ol>';
+  for(var i = 0; i < list.length; i++) {
+    listHTML += "<li>" + list[i] + "</li>";
+  }
+  listHTML += '</ol>';
+  print(listHTML);
+}
+printList(playList)
